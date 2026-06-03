@@ -16,23 +16,22 @@
     "vscode": {
       "extensions": [
         "dsznajder.es7-react-js-snippets",
-        "biomejs.biome",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
         "ms-playwright.playwright",
         "alexkrechik.cucumberautocomplete"
       ],
       "settings": {
         "git.alwaysSignOff": true,
-        "biome.searchInPath": false,
-        "biome.lsp.bin": "node_modules/@biomejs/cli-linux-x64/biome",
-        "editor.defaultFormatter": "biomejs.biome",
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
         "[javascript]": {
-          "editor.defaultFormatter": "biomejs.biome"
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[typescript]": {
-          "editor.defaultFormatter": "biomejs.biome"
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "[typescriptreact]": {
-          "editor.defaultFormatter": "biomejs.biome"
+          "editor.defaultFormatter": "esbenp.prettier-vscode"
         },
         "cucumberautocomplete.steps": [
           "e2e/tests/ui/features/@*/*.step.ts",
