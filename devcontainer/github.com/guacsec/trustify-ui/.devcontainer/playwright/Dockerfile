@@ -1,1 +1,1 @@
-FROM mcr.microsoft.com/playwright:v1.57.0-jammy
+FROM mcr.microsoft.com/playwright:v1.60.0-jammy
