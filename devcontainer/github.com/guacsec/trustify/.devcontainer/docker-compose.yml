@@ -4,6 +4,7 @@ networks:
 
 volumes:
   trustify-postgres-data:
+  trustify-claude-config:
 
 services:
   trustify:
@@ -20,10 +21,15 @@ services:
       UI_CLIENT_ID: frontend
       AUTHENTICATOR_OIDC_ISSUER_URL: http://trustify-keycloak:8080/realms/trustify
       AUTHENTICATOR_OIDC_CLIENT_IDS: frontend,cli
+      CLAUDE_CODE_USE_VERTEX: "1"
+      CLOUD_ML_REGION: ${CLOUD_ML_REGION:-us-east5}
+      ANTHROPIC_VERTEX_PROJECT_ID: ${ANTHROPIC_VERTEX_PROJECT_ID}
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ${TRUSTIFY_PATH:-~/git/guacsec/trustify}:/workspace:cached
       - ./postCreateCommand.sh:/tmp/postCreateCommand.sh:Z
+      - trustify-claude-config:/home/vscode/.claude
+      - ${HOME}/.config/gcloud:/home/vscode/.config/gcloud:cached
     networks:
       - trustify
     depends_on:

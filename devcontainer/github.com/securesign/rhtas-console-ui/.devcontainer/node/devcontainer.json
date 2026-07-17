@@ -1,0 +1,29 @@
+{
+  "name": "rhtas-console-ui",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "rhtas-console-ui",
+  "workspaceFolder": "/workspace",
+  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\"",
+  "forwardPorts": [
+    3000
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dsznajder.es7-react-js-snippets",
+        "esbenp.prettier-vscode",
+        "vitest.explorer"
+      ],
+      "settings": {
+        "git.alwaysSignOff": true
+      }
+    }
+  }
+}

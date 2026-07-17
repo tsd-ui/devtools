@@ -5,6 +5,8 @@
 
 echo "devcontainerID ${1}"
 
+mkdir -p "${HOME}/.config/gcloud"
+
 if [ "${CODESPACES}" = "true" ]; then
     > .devcontainer/full/.env
 

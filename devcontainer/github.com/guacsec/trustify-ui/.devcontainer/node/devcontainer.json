@@ -10,8 +10,10 @@
     "ghcr.io/devcontainers/features/common-utils:2": {},
     "ghcr.io/devcontainers/features/node:1": {
       "version": "22"
-    }
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
   },
+  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\"",
   "customizations": {
     "vscode": {
       "extensions": [

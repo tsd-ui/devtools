@@ -1,9 +1,10 @@
 {
-  "name": "trustify-e2e",
+  "name": "rhtas-console-e2e",
   "dockerComposeFile": "./docker-compose.yml",
-  "service": "trustify-playwright",
+  "service": "rhtas-console-playwright",
   "workspaceFolder": "/workspace/e2e",
   "remoteUser": "pwuser",
+  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\"",
   "forwardPorts": [
     6080,
     5901
@@ -20,7 +21,9 @@
       "VNC_RESOLUTION": "1920x1200x16"
     }
   },
-  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\"",
+  "containerEnv": {
+    "DISPLAY": ":2"
+  },
   "portsAttributes": {
     "6080": {
       "label": "browser vnc"
@@ -32,16 +35,10 @@
   "customizations": {
     "vscode": {
       "extensions": [
-        "ms-playwright.playwright",
-        "alexkrechik.cucumberautocomplete"
+        "ms-playwright.playwright"
       ],
       "settings": {
-        "git.alwaysSignOff": true,
-        "cucumberautocomplete.steps": [
-          "tests/ui/features/@*/*.step.ts",
-          "tests/ui/steps/*.ts"
-        ],
-        "cucumberautocomplete.strictGherkinCompletion": true
+        "git.alwaysSignOff": true
       }
     }
   }
