@@ -1,0 +1,27 @@
+{
+  "name": "ui-packages.redhat.com",
+  "dockerComposeFile": "./docker-compose.yml",
+  "service": "pulp-ui",
+  "workspaceFolder": "/workspace",
+  "forwardPorts": [
+    1337
+  ],
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {},
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "22"
+    },
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
+  },
+  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\" \"${HOME}/.vite-plugin-mkcert\"",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dsznajder.es7-react-js-snippets"
+      ],
+      "settings": {
+        "git.alwaysSignOff": true
+      }
+    }
+  }
+}
