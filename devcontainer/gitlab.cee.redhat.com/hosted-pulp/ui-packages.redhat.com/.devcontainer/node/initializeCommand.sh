@@ -5,4 +5,4 @@
 
 echo "devcontainerID ${1}"
 
-mkdir -p "${HOME}/.config/gcloud"
+mkdir -p "${HOME}/.config/gcloud" "${HOME}/.vite-plugin-mkcert"

@@ -4,7 +4,7 @@
   "service": "rhtas-console-playwright",
   "workspaceFolder": "/workspace/e2e",
   "remoteUser": "pwuser",
-  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\"",
+  "initializeCommand": "bash ${localEnv:DEVTOOLS_TSD_UI_PATH:~/git/devtools}/devcontainer/github.com/securesign/rhtas-console-ui/.devcontainer/playwright/initializeCommand.sh ${devcontainerId}",
   "forwardPorts": [
     6080,
     5901

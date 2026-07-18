@@ -13,7 +13,7 @@
     },
     "ghcr.io/anthropics/devcontainer-features/claude-code:1": {}
   },
-  "initializeCommand": "mkdir -p \"${HOME}/.config/gcloud\" \"${HOME}/.vite-plugin-mkcert\"",
+  "initializeCommand": "bash ${localEnv:DEVTOOLS_TSD_UI_PATH:~/git/devtools}/devcontainer/gitlab.cee.redhat.com/hosted-pulp/ui-packages.redhat.com/.devcontainer/node/initializeCommand.sh ${devcontainerId}",
   "customizations": {
     "vscode": {
       "extensions": [
