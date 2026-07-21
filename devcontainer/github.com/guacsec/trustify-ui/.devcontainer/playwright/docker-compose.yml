@@ -17,5 +17,6 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ${TRUSTIFY_UI_PATH:-~/git/guacsec/trustify-ui}:/workspace:cached
+      - ./postCreateCommand.sh:/tmp/postCreateCommand.sh:Z
       - trustify-e2e-claude-config:/home/pwuser/.claude
       - ${HOME}/.config/gcloud:/home/pwuser/.config/gcloud:cached

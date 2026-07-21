@@ -22,6 +22,7 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ${TRUSTIFY_UI_PATH:-~/git/guacsec/trustify}:/workspace:cached
+      - ./postCreateCommand.sh:/tmp/postCreateCommand.sh:Z
       - trustify-ui-claude-config:/home/vscode/.claude
       - ${HOME}/.config/gcloud:/home/vscode/.config/gcloud:cached
     networks:

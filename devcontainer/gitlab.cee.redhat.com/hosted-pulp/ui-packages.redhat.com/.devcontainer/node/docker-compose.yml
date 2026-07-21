@@ -20,6 +20,7 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ${UI_PACKAGES_REDHAT_COM_PATH:-~/git/pulp/ui-packages.redhat.com}:/workspace:cached
+      - ./postCreateCommand.sh:/tmp/postCreateCommand.sh:Z
       - pulp-ui-claude-config:/home/vscode/.claude
       - ${HOME}/.config/gcloud:/home/vscode/.config/gcloud:cached
       - ${HOME}/.vite-plugin-mkcert:/home/vscode/.vite-plugin-mkcert:cached

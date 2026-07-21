@@ -21,6 +21,7 @@ services:
     command: /bin/sh -c "while sleep 1000; do :; done"
     volumes:
       - ${RHTAS_CONSOLE_UI_PATH:-~/git/securesign/rhtas-console-ui}:/workspace:cached
+      - ./postCreateCommand.sh:/tmp/postCreateCommand.sh:Z
       - rhtas-console-ui-claude-config:/home/vscode/.claude
       - ${HOME}/.config/gcloud:/home/vscode/.config/gcloud:cached
     networks:
