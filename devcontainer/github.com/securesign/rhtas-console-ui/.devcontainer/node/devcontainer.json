@@ -19,6 +19,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "eamodio.gitlens",
         "dsznajder.es7-react-js-snippets",
         "esbenp.prettier-vscode",
         "vitest.explorer"

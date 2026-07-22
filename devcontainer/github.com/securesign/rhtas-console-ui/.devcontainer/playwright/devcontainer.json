@@ -37,6 +37,7 @@
   "customizations": {
     "vscode": {
       "extensions": [
+        "eamodio.gitlens",
         "ms-playwright.playwright"
       ],
       "settings": {
