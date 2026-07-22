@@ -13,6 +13,7 @@ services:
     extra_hosts:
       - "${HOSTNAME}:127.0.0.1"
     environment:
+      GH_TOKEN: ${GH_TOKEN}
       CLAUDE_CODE_USE_VERTEX: "1"
       CLOUD_ML_REGION: ${CLOUD_ML_REGION:-us-east5}
       ANTHROPIC_VERTEX_PROJECT_ID: ${ANTHROPIC_VERTEX_PROJECT_ID}
